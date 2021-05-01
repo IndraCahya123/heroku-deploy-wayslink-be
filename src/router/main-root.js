@@ -24,7 +24,7 @@ const {
     deleteUser
 } = require("../controllers/users");
 
-router.get("/user", getUserById);
+router.get("/user", authentication, getUserById);
 router.patch("/user", authentication, editUser);
 router.delete("/user", authentication, deleteUser);
 
