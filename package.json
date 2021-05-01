@@ -4,9 +4,7 @@
   "description": "server-side for final taks",
   "main": "server.js",
   "scripts": {
-    "start": "nodemon server.js",
-    "client": "npm start --prefix ../client",
-    "dev": "concurrently \"npm start\" \"npm run client\""
+    "start": "nodem server.js"
   },
   "author": "Indra Cahya Bali",
   "license": "ISC",
@@ -26,9 +24,5 @@
     "sequelize-cli": "^6.2.0",
     "slugify": "^1.5.0",
     "unique-string": "^2.0.0"
-  },
-  "devDependencies": {
-    "concurrently": "^6.0.0",
-    "nodemon": "^2.0.7"
   }
 }
