@@ -47,6 +47,11 @@ module.exports = {
         type: Sequelize.DATE
       }
     })
+      .then(() => {
+        return queryInterface.sequelize.query(
+          "ALTER TABLE `brands` ADD UNIQUE(uniqueLink);"
+        );
+      });
   },
   down: async (queryInterface, Sequelize) => {
     await queryInterface.dropTable('Brands');
