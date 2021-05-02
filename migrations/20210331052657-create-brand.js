@@ -49,7 +49,7 @@ module.exports = {
     })
       .then(() => {
         return queryInterface.sequelize.query(
-          "ALTER TABLE brands ADD UNIQUE(uniqueLink);"
+          "ALTER TABLE Brands ADD UNIQUE(uniqueLink);"
         );
       });
   },
