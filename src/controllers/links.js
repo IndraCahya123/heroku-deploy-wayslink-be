@@ -19,7 +19,6 @@ exports.addBrand = async (req, res) => {
                 viewCount: 0,
                 templateId: req.body.templateId,
                 userId: id,
-                UserId: id,
         });
         
         res.send({
