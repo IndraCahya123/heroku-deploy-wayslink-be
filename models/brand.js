@@ -12,7 +12,7 @@ module.exports = (sequelize, DataTypes) => {
     static associate(models) {
       Brand.belongsTo(models.User, {
         foreignKey: "userId",
-        as: "user",
+        as: "userId",
         onUpdate: "CASCADE",
         onDelete: "CASCADE"
       });
