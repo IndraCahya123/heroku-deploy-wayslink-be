@@ -11,7 +11,7 @@ const portServer = process.env.PORT || 5000;
 // agar penggunaan express.json berjalan dengan baik, masih harus install body-parser
 app.use(express.json());
 
-app.use(cors({ origin: "https://wayslink-be.herokuapp.com/link-api/v1", credentials: true }));
+app.use(cors());
 
 app.use("/link-api/v1", router);
 
