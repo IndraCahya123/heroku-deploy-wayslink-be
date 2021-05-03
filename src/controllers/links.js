@@ -29,7 +29,8 @@ exports.addBrand = async (req, res) => {
         console.log(error);
         res.status(500).send({
             status: "Server Error",
-            message: "Sorry, there's error in our server"
+            message: "Sorry, there's error in our server",
+            error: error
         });
     }
 }
