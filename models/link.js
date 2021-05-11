@@ -18,7 +18,7 @@ module.exports = (sequelize, DataTypes) => {
     }
   };
   Link.init({
-    brandUniqueLink: DataTypes.STRING,
+    uniqueLink: DataTypes.STRING,
     title: DataTypes.STRING,
     url: DataTypes.STRING,
     image: DataTypes.STRING
