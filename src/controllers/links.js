@@ -38,7 +38,7 @@ exports.addBrand = async (req, res) => {
 exports.addLinks = async (req, res) => {
     try {
         const links = await Link.create({
-            brandUniqueLink: req.body.uniqueKeyLink,
+            uniqueLink: req.body.uniqueKeyLink,
             title: req.body.title,
             url: req.body.url,
             image: req.files.image[0].filename
@@ -64,7 +64,7 @@ exports.addLinks = async (req, res) => {
 exports.addBlankLink = async (req, res) => {
     try {
         await Link.create({
-            brandUniqueLink: req.body.uniqueLink,
+            uniqueLink: req.body.uniqueLink,
             title: "",
             url: "",
             image: null
@@ -184,7 +184,7 @@ exports.getMyLinks = async (req, res) => {
         for (let i = 0; i < brands.length; i++) {
             const allLinks = await Link.findAll({
                 where: {
-                    brandUniqueLink: brands[i].uniqueLink
+                    uniqueLink: brands[i].uniqueLink
                 },
                 attributes: {
                     exclude: ["createdAt", "updatedAt",`uniqueLink`, `BrandId`]
@@ -253,7 +253,7 @@ exports.getBrand = async (req, res) => {
         
         const allLinks = await Link.findAll({
             where: {
-                brandUniqueLink: selectedBrand.uniqueLink
+                uniqueLink: selectedBrand.uniqueLink
             },
             attributes: {
                 exclude: ["createdAt", "updatedAt",`uniqueLink`, `BrandId`]
@@ -374,7 +374,7 @@ exports.previewLink = async (req, res) => {
 
         const allLinks = await Link.findAll({
             where: {
-                brandUniqueLink: selectedBrand.uniqueLink
+                uniqueLink: selectedBrand.uniqueLink
             },
             attributes: {
                 exclude: ["createdAt", "updatedAt",`uniqueLink`, `BrandId`]
@@ -468,7 +468,7 @@ exports.updateBrand = async (req, res) => {
 
         const allLinks = await Link.findAll({
             where: {
-                brandUniqueLink: updatedBrand.uniqueLink
+                uniqueLink: updatedBrand.uniqueLink
             },
             attributes: {
                 exclude: ["createdAt", "updatedAt",`uniqueLink`, `BrandId`]
