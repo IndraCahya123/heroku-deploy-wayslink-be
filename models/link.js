@@ -12,6 +12,7 @@ module.exports = (sequelize, DataTypes) => {
     static associate(models) {
       Link.belongsTo(models.Brand, {
         foreignKey: "uniqueLink",
+        as: "brandUniqueLink",
         onUpdate: "CASCADE",
         onDelete: "CASCADE"
       })
