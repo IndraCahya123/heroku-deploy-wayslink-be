@@ -10,7 +10,11 @@ module.exports = (sequelize, DataTypes) => {
      * The `models/index` file will call this method automatically.
      */
     static associate(models) {
-      Link.belongsTo(models.Brand)
+      Link.belongsTo(models.Brand, {
+        foreignKey: "uniqueLink",
+        onUpdate: "CASCADE",
+        onDelete: "CASCADE"
+      })
     }
   };
   Link.init({

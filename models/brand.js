@@ -16,9 +16,7 @@ module.exports = (sequelize, DataTypes) => {
         onDelete: "CASCADE"
       });
       Brand.hasMany(models.Link, {
-        foreignKey: "brandUniqueLink",
-        onUpdate: "CASCADE",
-        onDelete: "CASCADE"
+        foreignKey: "uniqueLink"
       })
     }
   };

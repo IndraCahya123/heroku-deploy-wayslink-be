@@ -8,7 +8,7 @@ module.exports = {
         primaryKey: true,
         type: Sequelize.INTEGER
       },
-      brandUniqueLink: {
+      uniqueLink: {
         allowNull: false,
         type: Sequelize.STRING,
         references: {
